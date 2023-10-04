@@ -1,0 +1,53 @@
+<!-- 冷山版权所有 未经允许 禁止使用 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>冷山CC攻击跳转界面</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('https://res.lengshanyun.top/images/sbcc.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0);
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h1>冷山云_sbcc.res.lengshanyun.top</h1>
+    <div v-for="(notice, index) in notices" :key="index" class="card mb-3">
+      <div class="card-body">
+        <p class="card-text">{{ notice }}</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@2.6.11"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          notices: [
+            '无论你是何种攻击方式来到的此界面，你看见了就证明你是个缺德人士',
+            '别让我逮到你，逮到你有你好果子吃┗|｀O′|┛ 嗷~',
+            '我们一个公益站点你还来打，宁是不是不要点B脸',
+            '死吗玩意还不快滚！！！'
+          ]
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
